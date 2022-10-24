@@ -14,6 +14,8 @@ puts "What is your name?"
 name = gets.chomp.to_s
 
 puts ""
+
+# //////////////////////////////getting the birth year//////////////////////////////
 puts "Well #{name}, what is your date of birth? (EX: Year/Month/Day)"
 
 birth_date = gets.chomp
@@ -27,9 +29,10 @@ if years < 17
     puts "Your not old enough #{name}, try again another time!"
 else
     puts "So your #{years} years old..."
+# ///////////////////////////end of getting the birth year///////////////////////////
     puts ""
+# ////////////////////////////////////achevements////////////////////////////////////
     puts "You are old enough! Tell me, what are your achevements?"
-
     achevements = gets.chomp
     while true
         if achevements == "" or achevements == " "
@@ -40,9 +43,10 @@ else
             break
         end
     end
-
+# /////////////////////////////////end of achevements/////////////////////////////////
     puts "Hmmm... Okay, well we will evaluate this later, do you have any work experience?"
 
+# //////////////////////////////////work experience//////////////////////////////////
     while true
         work = gets.chomp.downcase
         if work == "yes"
@@ -58,9 +62,11 @@ else
             puts "Please try typing yes or no instead of #{work}!"
         end
     end
+# ///////////////////////////////end of work experience///////////////////////////////
 
     puts "Your skills?"
 
+# ///////////////////////////////////////skills///////////////////////////////////////
     skills = gets.chomp
     while true
         if skills == "" or skills == " "
@@ -71,10 +77,12 @@ else
             break
         end
     end
+# ///////////////////////////////////end of skills///////////////////////////////////
 
     puts "One last question..."
     puts "What obstacles that you have overcome!"
 
+# /////////////////////////////////////obstacles/////////////////////////////////////
     obstacles = gets.chomp
     while true
         if obstacles == "" or obstacles == " "
@@ -87,6 +95,7 @@ else
             break
         end
     end
+# //////////////////////////////////end of obstacles//////////////////////////////////
 
     if dissapointment >= 3
         worthy = false
@@ -94,6 +103,7 @@ else
 
     next_month = d.next_month.strftime("%d/%m/%Y")
 
+# //////////////////////////////////accepted or not//////////////////////////////////
     while true
         if worthy == false
             puts "You have been declined an interview with the board... please try again next year!"
@@ -104,4 +114,5 @@ else
             puts "You barely passed! You will have an interview on #{next_month}, good luck!   =)"
         end
     end
+# ///////////////////////////////end of accepted or not///////////////////////////////
 end
